@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <header class="header">
+    <!-- Logo -->
+    <a href="/index.html" class="logo">Camera Station</a>
+
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu"/>
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+    <!-- Menu -->
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="/download.html">Download</a></li>
+            <li><a href="/liveView.html">Live View</a></li>
+            <li><a href="/imageGallery.html">Image Gallery</a></li>
+            <li><a href="/settings.html">Settings</a></li>
+        </ul>
+    </nav>
+</header>
+  </head>
+  <body>
+  <div class="menuGroupTitle"><h3>Download:</div>
+  <div class="horizontalLayout"> 
+    <div class="verticalLayout" onclick="downloadPhotos('all')">  
+      <img src="https://i.ibb.co/DMMRD8M/download-Icon.png" class= "Icon" alt="Download-Icon">
+      <button class="choiceButton">All Photos</button>
+    </div>
+    <div class="verticalLayout" onclick="downloadPhotos('new')">  
+      <img src="https://i.ibb.co/DMMRD8M/download-Icon.png" class= "Icon" alt="Download-Icon">
+      <button class="choiceButton">New Photos</button>
+    </div>
+  </div>
+  <div class="menuGroupTitle"><h3>Delete:</div>
+  <div class="horizontalLayout"> 
+    <div class="verticalLayout" onclick="confirmAction('all')">  
+    <img src="https://i.ibb.co/jbDqR3B/trash-Icon.png" class= "Icon" alt="Download-Icon">
+    <button class="choiceButton">All Photos</button>
+  </div>
+  <div class="verticalLayout" onclick="confirmAction('downloaded')">  
+    <img src="https://i.ibb.co/jbDqR3B/trash-Icon.png" class= "Icon" alt="Download-Icon">
+    <button class="choiceButton">Downloaded Photos</button>
+  </div>
+  </div>
+
+  <script>
+  // The function below will start the confirmation dialog
+
+</script>
+</head>
+</html>

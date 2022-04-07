@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <header class="header">
+    <!-- Logo -->
+    <a href="/index.html" class="logo">Camera Station</a>
+
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu"/>
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+    <!-- Menu -->
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="/download.html">Download</a></li>
+            <li><a href="/liveView.html">Live View</a></li>
+            <li><a href="/imageGallery.html">Image Gallery</a></li>
+            <li><a href="/settings.html">Settings</a></li>
+        </ul>
+    </nav>
+</header>
+  </head>
+  <body>
+
+
+    <!-- Portfolio Gallery Grid -->
+    <h2>Images:</h2>
+  <div class="horizontalLayout">
+    <div class="horizontalLayout" id="backNextButtons" >
+      <a href="#" id="previousButton" onclick="showPreviousImgs()" class="previous round">&#8249;</a>
+      <a href="#" id="nextButton" onclick="showNextImgs()" class="next round">&#8250;</a>
+    </div>
+  </div>
+
+  <div class="responsive">
+  <div class="gallery" id='gallery1'>
+      <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre" id="galleryimg1" width="600" height="400">
+    <div class="desc" id="desc1">Add a description of the image here</div>
+  </div>
+</div>
+
+    <div class="responsive">
+      <div class="gallery" id='gallery2'>
+          <img src="https://www.w3schools.com/css/img_forest.jpg" alt="Forest" id="galleryimg2" width="600" height="400">
+        <div class="desc" id="desc2">Add a description of the image here</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery" id='gallery3'>
+          <img src="https://www.w3schools.com/css/img_lights.jpg" alt="Northern Lights" id="galleryimg3" width="600" height="400">
+        <div class="desc" id="desc3">Add a description of the image here</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery" id='gallery4'>
+          <img src="https://www.w3schools.com/css/img_mountains.jpg" alt="Mountains" id="galleryimg4" width="600" height="400">
+        <div class="desc" id="desc4">Add a description of the image here</div>
+      </div>
+    </div>
+
+    
+  </body>
+
+      
+<script>
+showCurrentImages()
+//document.getElementById("gallery1").style.display = "none";
+document.getElementById("galleryimg1").style.display = "block";
+
+</script>
+
+</html>

@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <header class="header">
+    <!-- Logo -->
+    <a href="/index.html" class="logo">Camera Station</a>
+
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu"/>
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+    <!-- Menu -->
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="/download.html">Download</a></li>
+            <li><a href="/liveView.html">Live View</a></li>
+            <li><a href="/imageGallery.html">Image Gallery</a></li>
+            <li><a href="/settings.html">Settings</a></li>
+        </ul>
+    </nav>
+</header>
+  </head>
+  <body>
+  <div class="settingTitle">Time:</div>
+  <div class="settingTitle">Time:</div>
+    <div class="horizontalLayout"> 
+    <div class="verticalLayout" onclick="goToPage('download')">
+      <img src="https://i.ibb.co/DMMRD8M/download-Icon.png" class= "Icon" alt="Download-Icon">
+      <button class="choiceButton">Download/Delete</button>
+    </div>
+    <div class="verticalLayout" onclick="goToPage('preview')">  
+      <img src="https://i.ibb.co/6ww1N4k/camera-Icon.png" class= "Icon" alt="Download-Icon">
+      <button class="choiceButton">Live View</button>
+    </div>
+    <div class="verticalLayout" onclick="goToPage('gallery')">
+    <img src="https://i.ibb.co/C01rMFs/image-Gallery.png" class= "Icon" alt="Download-Icon">
+    <button class="choiceButton">Image Gallery</button>
+    </div>
+    <div class="verticalLayout" onclick="goToPage('help')">  
+    <img src="https://i.ibb.co/9pcHbBr/helpIcon.png" class= "Icon" alt="Download-Icon">
+    <button class="choiceButton">Help</button>
+    </div>
+    <div class="verticalLayout" onclick="goToPage('settings')">  
+    <img src="https://i.ibb.co/4Vh2v3s/settings-Icon.png" class= "Icon" alt="Download-Icon">
+    <button class="choiceButton">Settings</button>
+    </div>
+    </div>
+<!--
+    <div class="horizontalLayout">
+    <a href="/download.html">
+      <div class="verticalLayout">  
+        <img src="https://i.ibb.co/DMMRD8M/download-Icon.png" class= "Icon" alt="Download-Icon">
+        <button class="choiceButton">Download</button>
+      </div>
+    </a>
+    <a href="/liveView.html">
+      <div class="verticalLayout">
+        <img src="https://i.ibb.co/6ww1N4k/camera-Icon.png" class= "Icon" alt="Camera-Icon">
+        <button class="choiceButton">Live View</button>
+      </div>
+    </a>
+
+    <a href="/imageGallery.html">
+      <div class="verticalLayout">  
+        <img src="https://i.ibb.co/C01rMFs/image-Gallery.png" class= "Icon" alt="Settings-Icon">
+        <button class="choiceButton">Image Gallery</button>
+      </div>
+    </a>
+    <a href="/settings.html">
+      <div class="verticalLayout">
+        <img src="https://i.ibb.co/4Vh2v3s/settings-Icon.png" class= "Icon" alt="Settings-Icon">
+        <button class="choiceButton">Settings</button>
+      </div>
+    </a>
+  </div>
+-->
+  </body>
+
+</html>
+

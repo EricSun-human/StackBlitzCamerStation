@@ -1,0 +1,163 @@
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="script.js"></script>
+  <div id="app"></div>
+  
+      <!-- https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/ -->
+      <header class="header">
+      <!-- Logo -->
+      <a href="/index.html" class="logo">Camera Station</a>
+  
+      <!-- Hamburger icon -->
+      <input class="side-menu" type="checkbox" id="side-menu"/>
+      <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+  
+      <!-- Menu -->
+      <nav class="nav">
+          <ul class="menu">
+              <li><a href="/download.html">Download</a></li>
+              <li><a href="/liveView.html">Live View</a></li>
+              <li><a href="/imageGallery.html">Image Gallery</a></li>
+              <li><a href="/settings.html">Settings</a></li>
+          </ul>
+      </nav>
+  </header>
+  <main>
+  <h2>Settings:</h2>
+  <div class="settingList">
+    <div class="settingToggleGroup">
+      <div class="settingTitle">HDR:
+        <div class="moreInfoButton">?
+          <span class="moreInfoText">When HDR is enabled, the camera will fuse multiple photos together to create a image with higher contrast.</span>
+        </div>
+      </div>
+      <label class="switch">
+      <input id="HDRInput" type="checkbox" onchange="setHDR(this.id, this.checked)">
+      <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="settingToggleGroup">
+      <div class="settingTitle">Resolution:
+        <div class="moreInfoButton">?
+          <span class="moreInfoText">A higher resolution will have sharper images, but will take up more storage space.</span>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" value="240p" id="resolutionButton">--- p</button>
+        <div class="dropdown-content">
+          <a href="#" onclick="setResolution('144p')">144p</a>
+          <a href="#" onclick="setResolution('240p')">240p</a>
+          <a href="#" onclick="setResolution('360p')">360p</a>
+          <a href="#" onclick="setResolution('480p')">480p</a>
+          <a href="#" onclick="setResolution('720p')">720p</a>
+          <a href="#" onclick="setResolution('1080p')">1080p</a>
+        </div>
+      </div>
+    </div>
+    <div class="settingToggleGroup">
+      <div class="settingTitle">File Type:
+        <div class="moreInfoButton">?
+          <span class="moreInfoText">JPGs take the least space but are lower quality, RAWs takes the most space but are the highest quality, and PNGs are a balance between the two.</span>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" value="240p" id="fileTypeButton">type</button>
+        <div class="dropdown-content">
+          <a href="#" onclick="setFileType('JPG')">JPG</a>
+          <a href="#" onclick="setFileType('PNG')">PNG</a>
+          <a href="#" onclick="setFileType('RAW')">RAW</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menuGroup">
+    <div class="menuGroupTitle"><h3>Time Settings:</div>
+  
+      <div class="settingToggleGroup">
+        <div class="settingTitle">Time:
+          <div class="moreInfoButton">?
+            <span class="moreInfoText">Photos will start to be taken at this time.</span>
+          </div>
+        </div>
+          <input type="time" onchange="setTime()" id="timeInput" name="appt"
+        min="1:00" max="12:00" required>
+        </div>
+  
+      <div class="settingToggleGroup">
+        <div class="settingTitle">Repeat Every:
+          <div class="moreInfoButton">?
+            <span class="moreInfoText">Increment for taking photos. For example, '2 day' means that photos would be taken every 2 days </span>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" value="240p" id="frequencyButton">--select--</button>
+          <div class="dropdown-content">
+          <a href="#" onclick="setPhotoFrequency('Minute')">Minute</a>
+          <a href="#" onclick="setPhotoFrequency('Hour')">Hour</a>
+          <a href="#" onclick="setPhotoFrequency('Day')">Day</a>
+          <a href="#" onclick="setPhotoFrequency('Week')">Week</a>
+          <a href="#" onclick="setPhotoFrequency('Month')">Month</a>
+          <a href="#" onclick="setPhotoFrequency('Year')">Year</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="saveButton" onclick="saveSettings()">Save</button>
+  </div>
+  
+  <div class="footer">
+  <p>Footer</p>
+  </div>
+  
+  
+  
+  </main>
+  
+  
+  <!--  onchange="setTime()"
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time
+  
+  <div class="settingToggleGroup">
+      <div class="dropdown">
+      <button class="dropbtn" value="240p" id="ampmButton">am/pm</button>
+      <div class="dropdown-content">
+      <a href="#" onclick="setAMPM('AM')">AM</a>
+      <a href="#" onclick="setAMPM('PM')">PM</a>
+      </div>
+      </div>
+  
+      <div class="dropdown">
+      <button class="dropbtn" value="240p" id="dayButton">day</button>
+      <div class="dropdown-content">
+      <a href="#" onclick="setDay('SUN')">SUN</a>
+      <a href="#" onclick="setDay('MON')">MON</a>
+      <a href="#" onclick="setDay('TUE')">TUE</a>
+      <a href="#" onclick="setDay('WED')">WED</a>
+      <a href="#" onclick="setDay('THU')">THU</a>
+      <a href="#" onclick="setDay('FRI')">FRI</a>
+      <a href="#" onclick="setDay('SAT')">SAT</a>
+      </div>
+      </div>
+  
+      <div class="dropdown">
+      <button class="dropbtn" value="240p" id="hourButton">hour</button>
+      <div class="dropdown-content">
+      <a href="#" onclick="setHour('1')">01</a>
+      <a href="#" onclick="setHour('2')">02</a>
+      <a href="#" onclick="setHour('3')">03</a>
+      <a href="#" onclick="setHour('4')">04</a>
+      <a href="#" onclick="setHour('5')">05</a>
+      <a href="#" onclick="setHour('6')">06</a>
+      <a href="#" onclick="setHour('7')">07</a>
+      <a href="#" onclick="setHour('8')">08</a>
+      <a href="#" onclick="setHour('9')">09</a>
+      <a href="#" onclick="setHour('10')">10</a>
+      <a href="#" onclick="setHour('11')">11</a>
+      <a href="#" onclick="setHour('12')">12</a>
+      </div>
+      </div>
+  </div>
+  -->
+  
+  <script>
+  setDefaultSettings();
+  </script>
